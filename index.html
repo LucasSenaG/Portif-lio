@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Lucas Fraga Sena Girundi</title>
+    <link rel="icon" href="img/address-card.svg" type="image/png">
+</head>
+
+<body>
+
+    <section id="home">
+        <header>
+            <div class="esquerda">
+                <h3>desenvolvedor web</h3>
+            </div>
+            <div class="direita">
+                <h3>sobre mim</h3>
+                <h3>projetos</h3>
+                <h3>contato</h3>
+            </div>
+        </header>
+        <section id="inicio">
+            <h1 id="title">lucas girundi</h1>
+        </section>
+        <div class="center">
+            <a href="#sobremim"><i class="fa fa-arrow-down" aria-hidden="true" style="color: #2D2D2D;"
+                    id="seta-baixo"></i></a>
+        </div>
+    </section>
+
+    <section id="sobremim">
+        <div class="titulo">
+            <h2>sobre mim</h2>
+        </div>
+        <div class="container">
+            <div class="foto">
+                <img src="img/Lucas.png" alt="Foto Lucas" id="fotoLucas">
+            </div>
+            <div class="topicos">
+                <ul>
+                    <li><i class="fa-solid fa-graduation-cap"></i>
+                        <h4>Graduado em Ciência da Computação</h4>
+                    </li>
+                    <li><i class="fa-solid fa-code"></i>
+                        <h4>Desenvolvendo em PHP e Java</h4>
+                    </li>
+                    <li><i class="fa-solid fa-lightbulb"></i>
+                        <h4>Interesse em desenvolvimento Back-End</h4>
+                    </li>
+                    <li><i class="fa-solid fa-rocket"></i>
+                        <h4>Buscando uma oportunidade para atuar na área de interesse</h4>
+                    </li>
+                </ul>
+                <div class="center">
+                    <a href="#projetos"><i class="fa fa-arrow-down" aria-hidden="true" style="color: #fafafa;"
+                            id="seta-baixo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="carreira-box">
+            <h4 onclick="abreMaisInfo()" class="mais-info-btn" id="abre-mais-info">Clique aqui para mais detalhes</h4>
+            <h4 onclick="fechaMaisInfo()" class="mais-info-btn" id="fecha-mais-info">Clique aqui para menos detalhes
+            </h4>
+
+        </div>
+        <div class="mais-info">
+            <h5>
+                <p>
+                    Atualmente, encontro-me em um período de transição de carreira para o campo do desenvolvimento.
+                    Desempenho minhas funções no regime CLT, oferecendo suporte ao usuário final em uma renomada empresa
+                    de software. A particularidade do meu trabalho em home office proporciona-me flexibilidade temporal,
+                    abrindo espaço para me dedicar a outras oportunidades profissionais.
+                </p>
+                <p>
+                    Com uma sólida experiência em fornecer suporte técnico e uma compreensão aprofundada do ambiente de
+                    software, estou buscando expandir meus horizontes e direcionar minha trajetória para o universo do
+                    desenvolvimento. A autonomia proporcionada pelo trabalho remoto não apenas evidencia minha
+                    capacidade de gerenciar responsabilidades de forma eficiente, mas também demonstra minha disciplina
+                    e comprometimento em atingir metas estabelecidas.
+                </p>
+                <p>
+                    Neste momento de transição, estou entusiasmado em explorar novas oportunidades e contribuir
+                    ativamente para projetos desafiadores. Minha experiência prévia no suporte ao usuário final
+                    proporcionou-me uma visão valiosa sobre as necessidades dos clientes, habilidades interpessoais
+                    sólidas e uma capacidade comprovada de resolução de problemas.
+                </p>
+                <p>
+                    Estou aberto a colaborações, projetos freelance ou até mesmo oportunidades de trabalho em equipe que
+                    possam agregar valor ao meu perfil em desenvolvimento. Se você procura alguém dedicado, proativo e
+                    com habilidades técnicas, estou pronto para abraçar novos desafios e contribuir para o sucesso de
+                    sua equipe ou projeto.
+                </p>
+                <p>
+                    Conto com a flexibilidade e o dinamismo que a transição de carreira proporciona para me adaptar a
+                    diferentes contextos e agregar valor significativo ao ambiente de trabalho. Estou ansioso para
+                    explorar novas possibilidades e contribuir positivamente para os desafios do mundo do
+                    desenvolvimento.
+                </p>
+                <div class="center">
+                    <a href="#projetos"><i class="fa fa-arrow-down" aria-hidden="true" style="color: #fafafa;"
+                            id="seta-baixo"></i></a>
+                </div>
+            </h5>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div class="titulo">
+            <h2 id="titulo-projetos">Meus Projetos</h2>
+        </div>
+        <div id="carrossel">
+            <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30"
+                pagination="true" pagination-type="none" navigation="true">
+                <swiper-slide>
+                    <img src="img/Projetos/LoveSounds.png" alt="LoveSounds">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="img/Projetos/Atmosfera.png" alt="Atmosfera">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="img/Projetos/MenuDropdown.png" alt="MenuDropdown">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="img/Projetos/Cartao.png" alt="Cartão">
+                </swiper-slide>
+                <swiper-slide>Slide 5</swiper-slide>
+            </swiper-container>
+        </div>
+    </section>
+
+    <section id="contato">
+        <a href="https://api.whatsapp.com/send?phone=31996352605" target="_blank"><i class="fa-brands fa-whatsapp"
+                style="color: #fff"></i></a>
+        <h3>CASO PRECISE DE ALGUM PROJETO OU ORÇAMENTO, ESTOU À DISPOSIÇÃO.</h3>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
