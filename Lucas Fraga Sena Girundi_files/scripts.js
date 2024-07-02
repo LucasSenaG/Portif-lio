@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// EFEITO NO NOME 'LUCAS SENA' NO INÍCIO DA PÁGINA
+// EFEITO NO NOME 'LUCAS GIRUNDI' NO INÍCIO DA PÁGINA
 document.addEventListener("DOMContentLoaded", function () {
     const title = document.querySelector('h1');
 
@@ -102,42 +102,42 @@ function fechaMaisInfo() {
 
 
 //CARROSSEL 
-let swiper = new Swiper (".swiper", {
-    cssMode: true,
-    loop: true, 
-    navigation:{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination:{
-        el: ".swiper-pagination"
-    },
-    keyboard: true,
-});
+const swiperEl = document.querySelector('swiper-container');
+const swiper = swiperEl.swiper;
 
-
-let projeto1 = document.getElementById("projeto1");
-let projeto2 = document.getElementById("projeto2");
-let projeto3 = document.getElementById("projeto3");
-let projeto4 = document.getElementById("projeto4");
-
-const LARGURA_TELA = window.innerWidth;
-console.log(LARGURA_TELA);
-
-if (LARGURA_TELA <= 450){
-    projeto1.innerHTML = "<img src='img/Projetos/LoveSoundsMobile.png' alt='LoveSounds'></img>";
-
-    projeto2.innerHTML = "<img src='img/Projetos/AtmosferaMobile.png' alt='Atmosfera de amor'></img>";
-
-    projeto3.innerHTML = "<img src='img/Projetos/cardMobile.png' alt='Cadastro cartão'></img>";
-
-    projeto4.innerHTML = "<img src='img/Projetos/dropdownMobile.png' alt='Cadastro cartão'></img>";
-} else {
-    projeto1.innerHTML = "<img src='img/Projetos/LoveSounds.png' alt='LoveSounds'></img>";
-
-    projeto2.innerHTML = "<img src='img/Projetos/Atmosfera.png' alt='Atmosfera de amor'></img>";
-
-    projeto3.innerHTML = "<img src='img/Projetos/Cartao.png' alt='Cadastro cartão'></img>";
-
-    projeto4.innerHTML = "<img src='img/Projetos/MenuDropdown.png' alt='Cadastro cartão'></img>";
-}
+var appendNumber = 4;
+var prependNumber = 1;
+document
+    .querySelector(".prepend-2-slides")
+    .addEventListener("click", function (e) {
+        e.preventDefault();
+        swiper.prependSlide([
+            '<swiper-slide>Slide ' + --prependNumber + "</swiper-slide>",
+            '<swiper-slide>Slide ' + --prependNumber + "</swiper-slide>",
+        ]);
+    });
+document
+    .querySelector(".prepend-slide")
+    .addEventListener("click", function (e) {
+        e.preventDefault();
+        swiper.prependSlide(
+            '<swiper-slide>Slide ' + --prependNumber + "</swiper-slide>"
+        );
+    });
+document
+    .querySelector(".append-slide")
+    .addEventListener("click", function (e) {
+        e.preventDefault();
+        swiper.appendSlide(
+            '<swiper-slide>Slide ' + ++appendNumber + "</swiper-slide>"
+        );
+    });
+document
+    .querySelector(".append-2-slides")
+    .addEventListener("click", function (e) {
+        e.preventDefault();
+        swiper.appendSlide([
+            '<swiper-slide>Slide ' + ++appendNumber + "</swiper-slide>",
+            '<swiper-slide>Slide ' + ++appendNumber + "</swiper-slide>",
+        ]);
+    });

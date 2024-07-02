@@ -128,12 +128,20 @@ header {
 
 .titulo h2 {
     letter-spacing: 1rem;
-    text-shadow: -2px 1px 2px #7e7e7e99;
+    text-shadow: -2px 1px 2px rgba(0,0,0,0.6);
 }
 
 .titulo h3{
     font-size: x-large;
     letter-spacing: 2rem;
+}
+
+#outraCor {
+    position: absolute;
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
 .container {
@@ -148,7 +156,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 #fotoLucas {
@@ -157,9 +164,7 @@ header {
     border-radius: 50%;
     display: flex;
     object-fit: cover;
-    -webkit-box-shadow: -5px 0px 17px -1px #7e7e7e99;
-    -moz-box-shadow: -5px 0px 17px -1px #7e7e7e99;
-    box-shadow: -5px 0px 17px -1px #7e7e7e99;
+
 }
 
 .topicos {
@@ -279,28 +284,38 @@ header {
     margin: 0 100px;
 }
 
-#projetos main {
-    height: 60vh;
+swiper-container {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
 }
 
-#projetos img {
-    height: 60vh;
-}
-
-.swiper {
-    height: 500px;
-}
-
-.swiper-slide {
+swiper-slide {
     text-align: center;
+    font-size: 18px;
+    background: #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
+    border-radius: 12px;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+swiper-slide .conteudo-carrossel img {
+    object-fit: contain;
+    
+}
+
+swiper-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
 }
 
 #contato {
@@ -316,105 +331,4 @@ header {
 
 #contato i {
     font-size: xx-large;
-}
-
-
-/*720p*/
-@media screen and (max-width: 1400px){  
-    #projetos .titulo {
-        /* border: 2px solid red; */
-        display: flex;
-        align-items: center;
-        height: 15vh;
-    }
-    
-    #titulo-projetos{
-        padding-top: 0;
-    }
-
-    .swiper{
-        height: 400px;
-    }
-}
-
-
-/*Mobile*/
-@media screen and (max-width: 450px){
-    #home #inicio #title{
-        font-size: 50px;
-    }
-    
-    #sobremim .titulo h2 {
-        font-size: 15px;
-    }
-    
-    #sobremim .titulo h3 {
-        font-size: 10px;
-        letter-spacing: 1rem;
-    }
-    
-    .container{
-        flex-direction: column;
-    }
-    
-    .container .foto{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-        height: 30vh;
-    }
-    .container .foto #fotoLucas {
-        width: 200px;
-        height: 200px;
-    }
-
-    .container .topicos ul li{ 
-        font-size: 15px;
-        margin-left: 20px;
-    }
-
-    .mais-info{
-        width: 100vw;
-        left: 0;
-        top: 102%;
-    }
-
-    #contato h3{
-        font-size: 12px;
-    }
-    
-    #carrossel {
-        margin: 0 10px
-    }
-
-    .swiper {
-        height: 600px;
-        width: 600px;
-    }
-
-    .swiper-slide {
-        width: 400px;
-    }
-    
-    #projetos img{
-        height: 600px;
-        overflow: inherit;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    #sobremim .titulo h2 {
-        letter-spacing: 10px;
-    }
-
-    #sobremim .topicos ul li{
-        font-size: 12px;
-    }
-
-    #projetos img {
-        width: 200px;
-        height: 400px;
-        margin-top: 10vh;
-    }
 }
